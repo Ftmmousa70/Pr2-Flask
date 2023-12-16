@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Kerman</title>
+    <style>
+        tr, td, th {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>روز هفته</th>
+            <th>اذان صبح </th>
+            <th>طلوع آفتاب</th>
+            <th>اذان ظهر</th>
+            <th>غروب آفتاب</th>
+            <th>اذان مغرب</th>
+            <th>نیمه شب شرعی</th>
+        </tr>
+        {%- for result in results -%}
+        <tr>
+            <td>{{ result }}</td>
+            {%- for res in results[result] -%}
+            <td>{{ res }}</td>
+            {%- endfor -%}
+        </tr>
+        {%- endfor -%}
+    </table>
+</body>
+</html>
